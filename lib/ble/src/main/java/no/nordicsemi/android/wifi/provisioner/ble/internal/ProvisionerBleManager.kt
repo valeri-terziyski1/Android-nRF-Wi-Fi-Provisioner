@@ -119,7 +119,6 @@ internal class ProvisionerBleManager(
     @SuppressLint("MissingPermission")
     fun release() {
         log(Log.VERBOSE, "Disconnecting")
-        removeBond().enqueue()
         disconnect().enqueue()
     }
 
